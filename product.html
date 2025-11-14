@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fetch &amp; Supply – Product</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header-bar">
+    <div class="header-inner">
+      <div class="brand">Fetch &amp; Supply</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="product.html">Cart 🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <section class="product-layout">
+
+      <div class="product-main">
+
+        <div class="product-main-image">
+          <img id="mainImage" src="product_1.jpg" alt="Performance Harness main image" />
+        </div>
+
+        <div class="thumb-row">
+          <img src="thumb_1.jpg" alt="Harness view 1" onclick="swapImage('product_1.jpg')" />
+          <img src="thumb_2.jpg" alt="Harness view 2" onclick="swapImage('product_2.jpg')" />
+          <img src="thumb_3.jpg" alt="Harness view 3" onclick="swapImage('product_3.jpg')" />
+          <img src="thumb_4.jpg" alt="Harness view 4" onclick="swapImage('product_4.jpg')" />
+        </div>
+      </div>
+
+      <div class="product-side">
+        <h2 style="margin-top:0;">Performance Harness</h2>
+        <div style="font-size:13px; color:#000;">$79.99</div>
+
+        <div class="swatch-row">
+          <span style="font-size:12px;">Color:</span>
+          <div class="swatch" style="background:#000;"></div>
+          <div class="swatch" style="background:#b22222;"></div>
+          <div class="swatch" style="background:#006400;"></div>
+        </div>
+
+        <div class="size-row">
+          <span style="font-size:12px;">Size:</span>
+          <button class="size-btn">S</button>
+          <button class="size-btn">M</button>
+          <button class="size-btn">L</button>
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <a class="btn-primary" href="#">Add to Cart</a>
+        </div>
+
+        <div class="contact-box" style="margin-bottom:1rem;">
+          <div style="font-size:13px; font-weight:500; margin-bottom:.5rem;">Description</div>
+          <div style="font-size:12px; color:#333;">
+            Comfort-first design with breathable mesh, reflective trim, and secure chest strap.
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div style="font-size:13px; font-weight:500; margin-bottom:.5rem;">Sizing</div>
+          <div style="font-size:12px; color:#333;">Use weight / chest measurements to choose best fit.</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-left-title">Fetch &amp; Supply — Active Gear for Active Dogs</div>
+        <div class="footer-note">Greenville, NC • support@fetchandsupply.com</div>
+      </div>
+      <form class="footer-form">
+        <input class="footer-input" type="email" placeholder="Your email" />
+        <button class="footer-btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script>
+    function swapImage(newSrc) {
+      var mainImg = document.getElementById("mainImage");
+      if (mainImg) {
+        mainImg.src = newSrc;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fetch &amp; Supply – Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header-bar">
+    <div class="header-inner">
+      <div class="brand">Fetch &amp; Supply</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="product.html">Cart 🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <h2 class="section-heading" style="color:#000;">Contact &amp; Support</h2>
+    <p class="section-subtext" style="margin-bottom:1.5rem;">
+      Questions about sizing, shipping, or returns? Send us a message.
+    </p>
+
+    <section class="contact-form-wrapper">
+
+      <form class="contact-form"
+            action="mailto:tuttlen21@students.ecu.edu"
+            method="post"
+            enctype="text/plain"
+            onsubmit="return validateForm()">
+        <div style="margin-bottom:1rem;">
+          <label for="name">Name</label>
+          <input id="name" type="text" />
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="email">Email</label>
+          <input id="email" type="email" />
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="msg">Message</label>
+          <textarea id="msg"></textarea>
+        </div>
+
+        <button class="btn-primary" type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info-box">
+        <div style="font-size:12px; margin-bottom:.75rem;">
+          Shipping: 2–5 business days • Easy returns within 30 days.
+        </div>
+        <div style="font-size:12px;">
+          Support: support@fetchandsupply.com
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-left-title">Fetch &amp; Supply — Active Gear for Active Dogs</div>
+        <div class="footer-note">Greenville, NC • support@fetchandsupply.com</div>
+      </div>
+      <form class="footer-form">
+        <input class="footer-input" type="email" placeholder="Your email" />
+        <button class="footer-btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var msg = document.getElementById("msg").value.trim();
+
+      if (name === "" || email === "" || msg === "") {
+        alert("Please complete all fields before submitting.");
+        return false;
+      }
+
+      // basic email pattern
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>
